@@ -1,0 +1,5 @@
+---
+- name:  Check httpd package is installed
+  command: yum list installed httpd
+  register: output
+  failed_when: output.rc==1
